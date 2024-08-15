@@ -169,5 +169,5 @@ module "sandbox6" {
     group = "non-prod"
   }
 
-  account_customizations_name = "sandbox6"
+  account_customizations_name = "sandbox4"
 }
