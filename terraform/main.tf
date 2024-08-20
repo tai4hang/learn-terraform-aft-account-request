@@ -233,3 +233,32 @@ module "sandbox8" {
 
   account_customizations_name = "sandbox4"
 }
+
+
+module "sandbox9" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "sandbox-aft9@qualicom.com"
+    AccountName               = "sandbox-aft9"
+    ManagedOrganizationalUnit = "Learn AFT"
+    SSOUserEmail              = "gary.chan@qualicom.com"
+    SSOUserFirstName          = "Sandbox"
+    SSOUserLastName           = "AFT9"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT9"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform 9"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "sandbox4"
+}
